@@ -4,7 +4,8 @@
   padding: 0;
 }
 
-body, html {
+body,
+html {
   height: 100%;
   font-family: 'Open Sans', sans-serif;
 }
@@ -16,32 +17,42 @@ main {
 /* hero style start */
 
 .hero {
-  height: 40%;
+  height: auto;
+  width: auto;
+  display: block;
 }
-  
+
 .hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img/x-xtgONQzGgOE-unsplash.jpg");
-  height: 40%;
-  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('img/x-xtgONQzGgOE-unsplash.jpg');
+  height: auto;
+  width: auto;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  padding: 70px;
 }
-  
+
 .hero-text {
   text-align: center;
   position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-40%, -40%);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: auto;
+  /* top: 39%;
+  left: 42%;
+  transform: translate(-40%, -40%); */
   color: white;
 }
-  
+
 .hero-text p {
   padding: 30px;
 }
-  
+
 .hero-text button {
   border: none;
   outline: 0;
@@ -52,7 +63,7 @@ main {
   text-align: center;
   cursor: pointer;
 }
-  
+
 .hero-text button:hover {
   background-color: #09233c;
   color: white;
@@ -74,6 +85,9 @@ main {
 .about {
   height: 100%;
   color: #09233c;
+  width: auto;
+  display: inline-block;
+  padding: 20px;
 }
 
 .about-me {
@@ -113,22 +127,30 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  border-top: 1px solid #09233c;
 }
 
 .portfolio-title {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 0 20px 20px 20px;
+  margin-top: 20px;
+  background-color: #09233c;
+  color: white;
+}
+
+.portfolio-title h2 {
+  justify-content: flex-start;
 }
 
 .card {
   position: relative;
-  background-color: #5D6677;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  background-color: #5d6677;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
-  height: auto;
-  width: auto;
+  height: 100%;
+  width: 100%;
   border-radius: 20px;
   display: inline-block;
   vertical-align: top;
@@ -136,11 +158,12 @@ main {
 }
 
 .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px 0 rgba(254, 252, 252, 0.2);
 }
 
 .image {
   width: 100%;
+  height: 300px;
   display: inline-block;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
@@ -164,7 +187,7 @@ main {
 .list {
   position: relative;
   padding-top: 40px;
-  padding-bottom: 20px; 
+  padding-bottom: 20px;
 }
 
 /* portfolio style end */
@@ -202,7 +225,7 @@ label {
   background-color: #ddd;
   color: #09233c;
   padding: 14px 20px;
-  cursor:pointer;
+  cursor: pointer;
   margin-top: 10px;
   height: 40px;
 }
@@ -212,7 +235,8 @@ label {
   color: white;
 }
 
-input, textarea {
+input,
+textarea {
   border: none;
   border-radius: 3px;
   width: 100%;
@@ -230,19 +254,120 @@ footer {
   height: auto;
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  color: #09233c;
-  background-color: #ddd;
+  color: white;
+  background-color: #5d6677;
+  
 }
 
 footer h4 {
   padding: 20px 10px 10px 10px;
+  font-weight: lighter;
 }
 
 footer h5 {
   padding: 10px 20px 20px 20px;
+  font-weight: lighter;
+}
+
+footer > ul {
+  margin: 10px;
+  font-weight: lighter;
 }
 
 /* footer style end */
+
+/* media querries start */
+
+/* tablets start */
+
+@media only screen and (min-width: 768px) {
+
+.hero {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-text {
+  flex-direction: column;
+  font-size: larger;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  font-size: larger;
+}
+
+.about-me {
+  flex-direction: column;
+}
+
+.social {
+  font-size: x-large;
+}
+
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  flex-flow: row wrap;
+}
+
+.card {
+  flex: 1;
+  
+}
+
+#contactForm {
+  width: 800px;
+}
+
+.social-form {
+  position: relative;
+  display: inline;
+  align-items: center;
+  justify-content: center;
+}
+
+/* tablets end */
+
+/* laptops start */
+
+@media only screen and (min-width: 992px) {
+
+  /* #contactForm {
+    width: 500px;
+  } */
+ 
+  #contactForm h2, p {
+  /* position: relative;
+  display: inline;
+  float: right;
+  right: 100px;
+  top: 30px;
+  font-size: x-large */
+  }
+
+  /* .social-form {
+    position: relative;
+    display: inline;
+    float: right;
+    left: 500px;
+    top: 2px;
+  
+  } */
+
+  .social {
+    padding-right: 30px;
+    font-size: x-large
+  }
+
+}
+
+/* laptops end */
+
+/* media querries end */
