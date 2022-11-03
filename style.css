@@ -123,7 +123,7 @@ main {
   height: auto;
   background-color: #09233c;
   color: white;
-  padding: 40px;
+  padding: 10px 40px 40px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -134,7 +134,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 20px 20px 20px;
+  padding: 10px 20px 0 20px;
   margin-top: 20px;
   background-color: #09233c;
   color: white;
